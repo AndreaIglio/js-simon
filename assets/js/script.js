@@ -67,17 +67,34 @@ function userNumberList (){
       if (userNumber == numberList[i]) {
         matchedNumbers.push(userNumber);
       }
+      // else {
+      //   console.log('You dont have any matched numbers');
+      // }
     }
   }
 
-console.log(matchedNumbers);
-var x = matchedNumbers.length;
-var y = matchedNumbers;
+  var x = matchedNumbers.length;
+  var y = matchedNumbers;
 
-var finalResult = 'You have ' + x + ' matched numbers' + ', the correct numbers are ' + y;
-console.log(finalResult);
+  console.log(x);
+  console.log(y);
 
-
+ switch (matchedNumbers.length) {
+   case 0:
+     console.log("You dont have any matched numbers");
+     break;
+   case 1:
+     console.log("You have one number that match and is " + y);
+     break;
+   case 2:
+   case 3:
+   case 4:
+   case 5:
+     console.log(
+       "You have " + x + " matched numbers" + ", the correct numbers are " + y
+     );
+     break;
+ }
 }
 
 
