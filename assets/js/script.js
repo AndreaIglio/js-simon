@@ -52,6 +52,7 @@ $(function () {
 setTimeout(userNumberList, 1000);
 
 var userList = [];
+var matchedNumbers = [];
 
 function userNumberList (){
   for (var i = 0; userList.length < 5; i++) {
@@ -59,10 +60,24 @@ function userNumberList (){
     if (userList.indexOf(userNumber) == -1) {
       userList.push(userNumber);
     }
+
+    // Una volta inseriti i 5 numeri, il software dice quanti e quali numeri sono stati ricordati.
+
+    for (var i = 0; i < numberList.length; i++) {
+      if (userNumber == numberList[i]) {
+        matchedNumbers.push(userNumber);
+      }
+    }
   }
 
-  // Una volta inseriti i 5 numeri, il software dice quanti e quali numeri sono stati ricordati.
-  
+console.log(matchedNumbers);
+var x = matchedNumbers.length;
+var y = matchedNumbers;
+
+var finalResult = 'You have ' + x + ' matched numbers' + ', the correct numbers are ' + y;
+console.log(finalResult);
+
+
 }
 
 
