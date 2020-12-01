@@ -48,7 +48,22 @@ $(function () {
 
   
 // Dopo 30 secondi l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente.
-// Una volta inseriti i 5 numeri, il software dice quanti e quali numeri sono stati ricordati.
+
+setTimeout(userNumberList, 1000);
+
+var userList = [];
+
+function userNumberList (){
+  for (var i = 0; userList.length < 5; i++) {
+    var userNumber = Number(prompt("Inserisci un numero da 1 a 100"));
+    if (userList.indexOf(userNumber) == -1) {
+      userList.push(userNumber);
+    }
+  }
+
+  // Una volta inseriti i 5 numeri, il software dice quanti e quali numeri sono stati ricordati.
+  
+}
 
 
 
